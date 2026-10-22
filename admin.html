@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#090d18">
+  <title>Admin | Kwaku'so Study Hub</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+<header class="topbar"><nav class="nav wrap"><a class="brand" href="index.html"><span class="brand-icon">K</span><span>Kwaku'so <em>Study Hub</em></span></a><a class="back-link" href="index.html">← View website</a></nav></header>
+<main class="admin-wrap wrap">
+  <div class="admin-heading"><span class="eyebrow">PRIVATE AREA</span><h1>Resource admin.</h1><p>Sign in with the administrator account you created in Firebase to upload and publish resources.</p></div>
+  <div id="setupWarning" class="notice warning hidden">Firebase is not configured yet. Follow README.md to create a Firebase project and fill in <code>firebase-config.js</code> before using uploads.</div>
+  <section class="admin-panel" id="loginPanel">
+    <h2>Admin sign in</h2><p class="panel-desc">Only your authorized account should have permission to upload resources.</p>
+    <form id="loginForm" class="form-stack"><label for="adminEmail">Admin email</label><input id="adminEmail" type="email" autocomplete="username" required placeholder="you@example.com"><label for="adminPassword">Password</label><input id="adminPassword" type="password" autocomplete="current-password" required placeholder="Your admin password"><button class="btn primary full" type="submit">Sign in securely ↗</button><p id="loginMessage" class="form-message" role="status"></p></form>
+  </section>
+  <section class="admin-panel hidden" id="uploadPanel">
+    <div class="panel-title-row"><div><h2>Upload a resource</h2><p class="panel-desc">PDFs are recommended. Upload only files you have permission to share.</p></div><button id="logoutBtn" class="btn secondary small-btn" type="button">Sign out</button></div>
+    <form id="uploadForm" class="form-stack">
+      <label for="title">Resource title</label><input id="title" required maxlength="120" placeholder="e.g. Form 2 Algebra Revision Notes">
+      <div class="form-grid"><div><label for="level">Level</label><select id="level" required><option value="JHS">JHS / BECE</option><option value="SHS">SHS / WASSCE</option></select></div><div><label for="subject">Subject</label><input id="subject" required maxlength="60" placeholder="e.g. Mathematics"></div></div>
+      <div class="form-grid"><div><label for="yearGroup">Class / year (optional)</label><input id="yearGroup" maxlength="50" placeholder="e.g. JHS 3 / Form 2"></div><div><label for="resourceType">Resource type</label><select id="resourceType"><option>Notes</option><option>Past questions</option><option>Revision guide</option><option>Worksheet</option><option>Summary</option><option>Other</option></select></div></div>
+      <label for="description">Short description</label><textarea id="description" rows="3" maxlength="400" placeholder="What will students learn from this file?"></textarea>
+      <label for="fileInput">Choose a file (PDF, DOCX, PPTX, or image; max 15 MB)</label><input id="fileInput" type="file" required accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png">
+      <label class="check-label"><input id="publishNow" type="checkbox" checked> Publish this resource immediately</label>
+      <button class="btn primary full" id="uploadBtn" type="submit">Upload resource ↗</button><p id="uploadMessage" class="form-message" role="status"></p>
+    </form>
+    <div class="admin-list-heading"><h2>Your recent uploads</h2><button id="refreshBtn" class="btn secondary small-btn" type="button">Refresh</button></div>
+    <div id="adminResources" class="admin-resources"><p class="muted">Sign in to load your uploads.</p></div>
+  </section>
+  <p class="security-note"><strong>Security note:</strong> Hiding this page is not security. Firebase Authentication and the database/storage rules must be configured correctly before this admin area is used publicly.</p>
+</main>
+<footer><div class="wrap footer-inner"><a class="brand" href="index.html"><span class="brand-icon">K</span><span>Kwaku'so <em>Study Hub</em></span></a><small>Private admin area</small></div></footer>
+<script type="module" src="js/admin.js"></script>
+</body></html>

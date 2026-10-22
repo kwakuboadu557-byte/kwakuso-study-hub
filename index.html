@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d18">
+  <meta name="description" content="Find study notes, revision guides, and practice resources for BECE and WASSCE preparation.">
+  <title>Kwaku'so Study Hub | JHS & SHS Resources</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html"><span class="brand-icon">K</span><span>Kwaku'so <em>Study Hub</em></span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks"><a href="#resources">Resources</a><a href="#how">How it works</a><a href="#about">About</a><a class="nav-admin" href="admin.html">Admin login ↗</a></div>
+  </nav>
+</header>
+<main>
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <span class="eyebrow"><i></i> YOUR STUDY SPACE</span>
+      <h1>Study smarter.<br><span>Go further.</span></h1>
+      <p>Discover study notes, revision guides, and practice materials for BECE and WASSCE preparation — all in one place.</p>
+      <div class="hero-actions"><a class="btn primary" href="#resources">Explore resources <span>↘</span></a><a class="btn secondary" href="#how">How it works</a></div>
+      <div class="hero-foot"><span>JHS / BECE</span><b>·</b><span>SHS / WASSCE</span><b>·</b><span>Made for learners</span></div>
+    </div>
+    <div class="hero-art" aria-label="Illustration of study resources">
+      <div class="orb orb-a"></div><div class="orb orb-b"></div>
+      <div class="study-card main-card"><div class="paper-head"><span class="paper-icon">✳</span><span>STUDY NOTES</span><span class="paper-dots">•••</span></div><div class="paper-title"></div><div class="paper-title short"></div><div class="paper-line"></div><div class="paper-line"></div><div class="paper-line half"></div><div class="paper-highlight"><span>✓</span> Revision checklist</div><div class="paper-bottom"><span>KWAKU'SO STUDY HUB</span><span>01 / 04</span></div></div>
+      <div class="float-chip chip-top"><span>📘</span><div><strong>BECE prep</strong><small>Build confidence</small></div></div>
+      <div class="float-chip chip-bottom"><span>🎓</span><div><strong>WASSCE prep</strong><small>One topic at a time</small></div></div>
+      <span class="spark spark-a">✦</span><span class="spark spark-b">✳</span>
+    </div>
+  </section>
+  <section class="quick-stats wrap"><div><strong>JHS</strong><span>BECE resources</span></div><div><strong>SHS</strong><span>WASSCE resources</span></div><div><strong>PDFs</strong><span>Study materials</span></div><div><strong>Free</strong><span>Browse and learn</span></div></section>
+
+  <section class="section wrap" id="resources">
+    <div class="section-heading"><div><span class="eyebrow">RESOURCE LIBRARY</span><h2>Find what you need.</h2><p>Search by subject, level, or topic to find your next study resource.</p></div><span class="library-label">THE LIBRARY <b>↘</b></span></div>
+    <div class="filters">
+      <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search notes, subjects, topics…" aria-label="Search resources"></label>
+      <select id="levelFilter" aria-label="Filter by level"><option value="all">All levels</option><option value="JHS">JHS / BECE</option><option value="SHS">SHS / WASSCE</option></select>
+      <select id="subjectFilter" aria-label="Filter by subject"><option value="all">All subjects</option></select>
+    </div>
+    <div id="statusMessage" class="status-message">Loading resources…</div>
+    <div id="resourceGrid" class="resource-grid" aria-live="polite"></div>
+    <div class="empty-state hidden" id="emptyState"><div>⌕</div><h3>No resources found yet</h3><p>Try a different search, or check back as new study materials are added.</p></div>
+    <p class="library-note"><span>✦</span> Only share materials you created or have permission to distribute. Check answers and notes against your teacher's guidance.</p>
+  </section>
+
+  <section class="how-section" id="how"><div class="wrap"><div class="section-heading"><div><span class="eyebrow">SIMPLE BY DESIGN</span><h2>Study without the stress.</h2></div></div><div class="steps"><article><span>01</span><div class="step-icon">⌕</div><h3>Find a resource</h3><p>Search by level, subject, or topic to find materials relevant to your studies.</p></article><article><span>02</span><div class="step-icon">↧</div><h3>Download and learn</h3><p>Open a resource and download it to revise online or offline.</p></article><article><span>03</span><div class="step-icon">✳</div><h3>Keep improving</h3><p>Use the materials alongside class notes, textbooks, and teacher feedback.</p></article></div></div></section>
+  <section class="about-section wrap" id="about"><div class="about-mark">K<span>✳</span></div><div><span class="eyebrow">ABOUT THE HUB</span><h2>Made by a learner,<br>for learners.</h2><p>Kwaku'so Study Hub is being built to make useful study materials easier to discover for JHS and SHS students. The library will grow as original notes and permitted resources are added.</p></div></section>
+  <section class="ad-area wrap" aria-label="Advertisement space"><div class="ad-placeholder"><span>ADVERTISEMENT</span><p>Ad space may appear here after the site is approved by an advertising provider.</p></div></section>
+</main>
+<footer><div class="wrap footer-inner"><a class="brand" href="#"><span class="brand-icon">K</span><span>Kwaku'so <em>Study Hub</em></span></a><p>Learn a little every day.</p><a href="admin.html">Admin ↗</a><small>© <span id="year"></span> Kwaku'so Study Hub</small></div><div class="wrap footer-legal">Educational resource directory. Always follow your school's academic integrity rules.</div></footer>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
